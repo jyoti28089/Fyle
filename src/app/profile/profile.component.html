@@ -1,0 +1,10 @@
+<div class="profile-container">
+  <div class="profile-image" [class.profile-loader]="true">
+    <img class="profile-image-src" src="{{ownerData?.avatar_url}}">
+  </div>
+  <div>
+    <h1>{{ownerData?.name}}</h1>
+    <p>{{ownerData?.bio}}</p>
+    <p *ngIf="ownerData?.location"><img src="../../assets/location_on_black_24dp.svg">{{ownerData?.location}}</p>
+  </div>
+</div>

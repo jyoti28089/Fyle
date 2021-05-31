@@ -1,0 +1,13 @@
+.repository-item {
+  display: inline-flex;
+  width: calc(50% - 10px);
+  height: 200px;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+.pagination-container{
+  justify-content: center;
+  display: flex;
+  margin: 10px;
+}

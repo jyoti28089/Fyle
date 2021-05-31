@@ -1,0 +1,9 @@
+<div class="repository-details">
+  <div>
+    <h1>{{repoData?.name}}</h1>
+    <p>{{repoData?.description}}</p>
+  </div>
+  <div *ngIf="repoData?.language" class="repository-language">
+    <span>{{repoData?.language}}</span>
+  </div>
+</div>

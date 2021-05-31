@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let repoData of repositoryData" class="repository-item">
+    <app-repository [repoData]="repoData"></app-repository>
+  </div>
+</div>
+<div class="pagination-container">
+  <app-pagination [collectionSize]="totalPage" [pageSize]="10" [currentPage]="pageNumber"
+                  (pageChangeEmitter)="onPagination($event)"></app-pagination>
+</div>

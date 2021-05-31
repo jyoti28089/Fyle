@@ -1,0 +1,16 @@
+h1 {
+  color: #5088bc;
+}
+
+.repository-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.repository-language {
+  background-color: #5088bc;
+  color: white;
+  padding: 5px;
+  width: fit-content;
+}
