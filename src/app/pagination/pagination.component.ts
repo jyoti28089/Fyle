@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-pagination',
@@ -12,7 +11,7 @@ export class PaginationComponent implements OnInit {
   @Input() collectionSize: any;
   @Output() pageChangeEmitter = new EventEmitter<any>();
 
-  constructor(private appService: AppService) {
+  constructor() {
   }
 
   ngOnInit(): void {

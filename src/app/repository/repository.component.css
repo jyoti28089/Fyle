@@ -1,5 +1,10 @@
-h1 {
+h2 {
   color: #5088bc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: 0 0 15px 0;
 }
 
 .repository-details {
@@ -11,6 +16,7 @@ h1 {
 .repository-language {
   background-color: #5088bc;
   color: white;
+  border-radius: 5px;
   padding: 5px;
   width: fit-content;
 }

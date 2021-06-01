@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  owner: 'Sunbird-Ed',
+  pageSize: 10
 };

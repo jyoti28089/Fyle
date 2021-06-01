@@ -1,9 +1,14 @@
+<div *ngIf="!repositoryData?.length">
+  <p class="w-80" [class.loader]="!repositoryData?.length"></p>
+  <p class="w-100" [class.loader]="!repositoryData?.length"></p>
+  <p class="w-60" [class.loader]="!repositoryData?.length"></p>
+</div>
 <div>
-  <div *ngFor="let repoData of repositoryData" class="repository-item">
+  <div *ngFor="let repoData of repositoryData; trackBy: trackByFn" class="repository-item">
     <app-repository [repoData]="repoData"></app-repository>
   </div>
 </div>
-<div class="pagination-container">
+<div class="pagination-container" *ngIf="repositoryData?.length">
   <app-pagination [collectionSize]="totalPage" [pageSize]="10" [currentPage]="pageNumber"
                   (pageChangeEmitter)="onPagination($event)"></app-pagination>
 </div>

@@ -1,10 +1,16 @@
 <div class="profile-container">
-  <div class="profile-image" [class.profile-loader]="true">
-    <img class="profile-image-src" src="{{ownerData?.avatar_url}}">
+  <div class="profile-image-container">
+    <div class="profile-image" [class.loader]="!ownerData?.avatar_url">
+      <img class="profile-image-src" src="{{ownerData?.avatar_url}}">
+    </div>
+    <div class="profile-link">
+      <p *ngIf="ownerData?.html_url"><img src="../../assets/link_black_24dp.svg">{{ownerData?.html_url}}</p>
+    </div>
   </div>
   <div>
-    <h1>{{ownerData?.name}}</h1>
-    <p>{{ownerData?.bio}}</p>
+    <h1 [class.loader]="!ownerData?.name">{{ownerData?.name}}</h1>
+    <p [class.loader]="!ownerData?.bio">{{ownerData?.bio}}</p>
     <p *ngIf="ownerData?.location"><img src="../../assets/location_on_black_24dp.svg">{{ownerData?.location}}</p>
+    <p>Twitter: {{ownerData?.twitter_username || 'No handle given'}}</p>
   </div>
 </div>
